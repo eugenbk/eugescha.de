@@ -1,0 +1,18 @@
+DROP DATABASE IF EXISTS eugescha_db;
+CREATE DATABASE IF NOT EXISTS eugescha_db;
+
+USE eugescha_db;
+
+DROP TABLE IF EXISTS T_Photo;
+CREATE TABLE IF NOT EXISTS T_Photo (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  thumbnail_path VARCHAR(255) NOT NULL
+)
+ENGINE = InnoDB;
+
+INSERT INTO T_Photo
+(thumbnail_path)
+VALUES
+("1.jpg"),
+("2.jpg"),
+("3.jpg");
