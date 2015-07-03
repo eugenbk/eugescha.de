@@ -13,7 +13,7 @@ html, body {
   height: 100%;
 }
 
-#headingBehind , #headingBackground {
+div#splashScreenBehind , div#splashScreenBackground {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -24,7 +24,7 @@ html, body {
   background-size: cover;
 }
 
-#content {
+div#thumbArea {
   position: absolute;
   top: 100%;
   width: 100%;
