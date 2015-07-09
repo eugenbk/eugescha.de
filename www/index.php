@@ -1,4 +1,3 @@
-﻿<?php require_once("php/func.php"); ?>
 <!doctype html>
 <html>
 <head>
@@ -11,20 +10,18 @@
 <body>
   <div id="splashScreenBehind"></div>
   <div id="splashScreenBackground"></div>
-  <div id="thumbArea">
+  <div id="thumbnailsArea">
+    <div id="stickyAnchor"></div>
     <ul id="menu">
-      <li>Ретроспектива</li>
-      <li>География</li>
-      <li>Голос публики</li>
+      <li><a id="what" href="/">Чо-кого</a></li>
+      <li><a id="retro" href="/retro">Ретроспектива</a></li>
+      <li><a id="geo" href="/geo">География</a></li>
+      <li><a id="voice" href="/voice">Голос публики</a></li>
+      <li><a id="authors" href="/authors">Авторы</a></li>
     </ul>
-    <?php
-      $thumbs = getThumbs();
-      foreach ($thumbs as $thumb) {
-      ?>
-        <img src="thumbnails\<?php echo $thumb ?>">
-      <?php
-      }
-    ?>
+    <div id="thumbnails">
+      <?php require_once("/php/view/thumbnails.php"); ?>
+    </div>
   </div>
 </body>
 </html>
