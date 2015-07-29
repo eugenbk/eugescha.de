@@ -1,2 +1,5 @@
-Options  -Indexes
+Options -Indexes
 DirectoryIndex index.php
+
+RewriteEngine on
+RewriteRule ^photo/(\d+)/$ photo.php?id=$1 [L]
