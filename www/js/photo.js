@@ -9,8 +9,36 @@ $(document).ready(function(){
     }
   });
 
-  $('#fotorama').on('mouseleave', function () {
-    $('#closePhoto').toggle("slide", { direction: "left" }, 1000);
+  $(document).on('mouseenter', function () {
+    $('#closePhoto').toggleClass('closePhotoHover');
+    //$('#closePhoto').show("slide", { direction: "left" }, 200);
+  });
+
+  $(document).on('mouseleave', function () {
+    $('#closePhoto').toggleClass('closePhotoHover');
+    //$('#closePhoto').hide("slide", { direction: "left" }, 200);
+  });
+
+  var i = null;
+  $(document).mousemove(function() {
+    clearTimeout(i);
+    $('.control').addClass('closePhotoHover');
+    i = setTimeout('$(".control").removeClass("closePhotoHover");', 3000);
+}).mouseleave(function() {
+    clearTimeout(i);
+    $('.control').removeClass('closePhotoHover');
+});
+
+  $('#closePhoto').click(function() {
+    window.location.href = '/';
+  });
+
+  $('#prevPhoto').click(function() {
+    fotorama.show('<');
+  });
+
+  $('#nextPhoto').click(function() {
+    fotorama.show('>');
   });
 
   fotorama = $('#fotorama').fotorama({
@@ -18,6 +46,7 @@ $(document).ready(function(){
     width: '100%',
     height: '100%',
     nav: false,
+    arrows: false,
     startindex: startindex
   }).data('fotorama');
 });

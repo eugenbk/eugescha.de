@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/css/photo.css">
   <link rel="stylesheet" href="/css/fotorama.css">
   <script src="/js/jquery-2.1.4.min.js"></script>
+  <script src="/js/jquery-ui.min.js"></script>
   <script src="/js/fotorama.js"></script>
   <script src="/js/photo.js"></script>
   <script>
@@ -18,6 +19,8 @@
 </head>
 <body>
   <div id="fotorama" data-auto="false"></div>
-  <a id="closePhoto" href="/">X</a>
+  <div id="closePhoto" class="control">&#231;</div>
+  <div id="prevPhoto" class="control">&#x25C0;</div>
+  <div id="nextPhoto" class="control">&#9654;</div>
 </body>
 </html>

@@ -11,6 +11,7 @@
 <body>
   <div id="imageBehind"></div>
   <div id="imageBackground"></div>
+  <div id="scrollDown">&#x25bc;</div>
   <div id="thumbs">
     <?php
       foreach ($thumbs as $t) {
