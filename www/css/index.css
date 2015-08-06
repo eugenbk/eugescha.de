@@ -1,3 +1,5 @@
+@import "http://webfonts.ru/import/beermoney.css";
+
 #imageBehind , #imageBackground {
   width: 100%;
   height: 100%;
@@ -27,4 +29,38 @@
   height: 160px;
   margin: 16px;
   border: 1px solid black;
+}
+
+#scrollDown {
+  font-size: 1.25em;
+  color: white;
+  line-height: 1em;
+  position: fixed;
+  left: 50%;
+  margin-left: -.5em;
+  bottom: 1em;
+}
+
+#scrollDown:hover {
+  text-shadow: yellow 0 0 .5em;
+   -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+#coord {
+  color: white;
+  position: fixed;
+  left: 55%;
+  top: 60%;
+  font-size: 3em;
+  line-height: 1;
+  font-family: 'Beer money';
+  text-decoration: none;
+}
+
+#coord, #coord:active, #coord:hover, #coord:visited {
+  color: white;
 }

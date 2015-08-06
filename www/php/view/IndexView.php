@@ -11,6 +11,7 @@
 <body>
   <div id="imageBehind"></div>
   <div id="imageBackground"></div>
+  <a id="coord" href="https://www.here.com/?map=48.13373,11.59471,19">48°08'01.4"N</br>11°35'40.9"E</a>
   <div id="scrollDown">&#x25bc;</div>
   <div id="thumbs">
     <?php
