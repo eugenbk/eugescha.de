@@ -11,7 +11,10 @@
 <body>
   <div id="imageBehind"></div>
   <div id="imageBackground"></div>
-  <a id="coord" href="https://www.here.com/?map=48.13373,11.59471,19">48°08'01.4"N</br>11°35'40.9"E</a>
+  <div id="coord" class="afterLoad">
+    <a href="https://www.here.com/?map=48.13373,11.59471,19&x=ep">48°08'01.4"N</a></br>
+    <a href="https://www.here.com/?map=48.13373,11.59471,19&x=ep">11°35'40.9"E</a>
+  </div>
   <div id="scrollDown">&#x25bc;</div>
   <div id="thumbs">
     <?php
