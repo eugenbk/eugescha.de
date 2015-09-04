@@ -9,26 +9,6 @@ $(document).ready(function(){
     }
   });
 
-  $(document).on('mouseenter', function () {
-    $('#closePhoto').toggleClass('closePhotoHover');
-    //$('#closePhoto').show("slide", { direction: "left" }, 200);
-  });
-
-  $(document).on('mouseleave', function () {
-    $('#closePhoto').toggleClass('closePhotoHover');
-    //$('#closePhoto').hide("slide", { direction: "left" }, 200);
-  });
-
-  var i = null;
-  $(document).mousemove(function() {
-    clearTimeout(i);
-    $('.control').addClass('closePhotoHover');
-    i = setTimeout('$(".control").removeClass("closePhotoHover");', 3000);
-}).mouseleave(function() {
-    clearTimeout(i);
-    $('.control').removeClass('closePhotoHover');
-});
-
   $('#closePhoto').click(function() {
     window.location.href = '/';
   });

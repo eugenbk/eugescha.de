@@ -1,13 +1,13 @@
 <?php
-require_once($_SERVER["DOCUMENT_ROOT"] . "/php/business/AppConfig.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/php/config.php");
 
 function load($query) {
   $res = array();
 
-  global $dbSrv, $dbUsr, $dbPwd, $dbName;
+  global $config;
 
-  mysql_connect($dbSrv, $dbUsr, $dbPwd) or die(mysql_error());
-  mysql_select_db($dbName);
+  mysql_connect($config["dbSrv"], $config["dbUsr"], $config["dbPwd"]) or die(mysql_error());
+  mysql_select_db($config["dbName"]);
 
   $result = mysql_query($query);
 

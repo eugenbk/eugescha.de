@@ -1,59 +1,35 @@
 #closePhoto {
-  position: fixed;
-  top: 1em;
-  left: 1em;
-  opacity: 0;
-  color: white;
-  font-family: wingdings;
-  font-size: 1.5em;
   border: .1em solid white;
   border-radius: .85em;
-  width: 1.5em;
+  color: white;
+  font-size: 1.5em;
   height: 1.5em;
-  text-align: center;
+  left: 1em;
   line-height: 1.5em;
-  -webkit-transition-property:  opacity;
-  -moz-transition-property:  opacity;
-  -o-transition-property:  opacity;
-  transition-property:  opacity;
-  -webkit-transition-duration: .5s;
-  -moz-transition-duration: .5s;
-  -o-transition-duration: .5s;
-  transition-duration: .5s;
+  position: fixed;
+  text-align: center;
+  top: 1em;
+  width: 1.5em;
   box-sizing: content-box;
   -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-.closePhotoHover {
-  opacity: 1 !important;
+#closePhoto:hover {
+  -webkit-box-shadow: 0 0 .5em yellow;
+  -moz-box-shadow:0 0 .5em yellow;
+  box-shadow:0 0 .5em yellow;
 }
 
 #prevPhoto, #nextPhoto {
-  position: fixed;
+  color: white;
   font-size: 1.5em;
   height: 1em;
-  opacity: 0;
   line-height: 1em;
-  top: 50%;
   margin-top: -.5em;
-  color: white;
-  -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
-      -webkit-transition-property:  opacity;
-  -moz-transition-property:  opacity;
-  -o-transition-property:  opacity;
-  transition-property:  opacity;
-  -webkit-transition-duration: .5s;
-  -moz-transition-duration: .5s;
-  -o-transition-duration: .5s;
-  transition-duration: .5s;
+  position: fixed;
+  top: 50%;
 }
 
 #prevPhoto {
@@ -62,12 +38,6 @@
 
 #nextPhoto {
   right: 1.25em;
-}
-
-#closePhoto:hover {
-  -webkit-box-shadow: 0 0 .5em yellow;
- -moz-box-shadow:0 0 .5em yellow;
- box-shadow:0 0 .5em yellow;
 }
 
 #prevPhoto:hover, #nextPhoto:hover {
