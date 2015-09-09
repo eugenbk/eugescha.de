@@ -22,6 +22,14 @@
   box-shadow:0 0 .5em yellow;
 }
 
+#prevPhoto {
+  left: 1.25em;
+}
+
+#nextPhoto {
+  right: 1.25em;
+}
+
 #prevPhoto, #nextPhoto {
   color: white;
   font-size: 1.5em;
@@ -30,14 +38,6 @@
   margin-top: -.5em;
   position: fixed;
   top: 50%;
-}
-
-#prevPhoto {
-  left: 1.25em;
-}
-
-#nextPhoto {
-  right: 1.25em;
 }
 
 #prevPhoto:hover, #nextPhoto:hover {

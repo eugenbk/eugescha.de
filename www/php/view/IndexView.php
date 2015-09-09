@@ -6,14 +6,13 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/index.css">
   <script src="/js/jquery-2.1.4.min.js"></script>
-  <script src="/js/script.js"></script>
   <script src="/js/index.js"></script>
 </head>
 <body>
   <div id="imageBackground"></div>
   <div id="imageBehind"></div>
   <div id="coordContainer">
-    <a href="https://www.here.com/?map=48.13373,11.59471,19&x=ep">48°08'01.4"N</a></br>
+    <a href="https://www.here.com/?map=48.13373,11.59471,19&x=ep">48°08'01.4"N</a><br/>
     <a href="https://www.here.com/?map=48.13373,11.59471,19&x=ep">11°35'40.9"E</a>
   </div>
   <div id="thumbContainer">
