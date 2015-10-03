@@ -29,13 +29,16 @@ $(document).ready(function(){
     fotorama.show('>');
   });
 
+  // hiding control elements when no mouse moving
+  var timeout = 3000; // 3 sec
   var id = null;
   $(document).mousemove(function() {
     clearTimeout(id);
     $('.control').addClass('controlVisible');
-    id = setTimeout('$(".control").removeClass("controlVisible");', 3000);
+    id = setTimeout('$(".control").removeClass("controlVisible");', timeout);
   });
 
+  // displaying and hiding control elements when entering and leaving browser window by the cursor
   $(document).on('mouseenter', function () {
     $('.control').toggleClass('controlVisible');
   });
@@ -43,16 +46,18 @@ $(document).ready(function(){
     clearTimeout(id);
     $('.control').toggleClass('controlVisible');
   });
-});
 
-$(window).on("popstate", function(e) {
-  var found = location.href.match(/.+\/photo\/(\d+)\//i);
-  if (found != -1) {
-    var urlId = found[1];
-    var newindex = urlIdToFotoramaId(urlId);
-    fotorama.show(newindex);
-    lastindex = newindex;
-  }
+  // handling browser 'back' button
+  var re = new RegExp('/.+' + config['photoDir'] + '(\\d+)/', 'i');
+  $(window).on("popstate", function(e) {
+    var found = location.href.match(re);
+    if (found != -1) {
+      var urlId = found[1];
+      var newindex = urlIdToFotoramaId(urlId);
+      fotorama.show(newindex);
+      lastindex = newindex;
+    }
+  });
 });
 
 function fotoramaIdToUrlId(fotoramaId) {
