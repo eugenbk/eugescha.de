@@ -12,24 +12,3 @@ html, body {
   height: 100%;
   background-color: black;
 }
-
-.control {
-  cursor: pointer;
-  opacity: 0;
-  -webkit-transition-property:  opacity;
-  -moz-transition-property:  opacity;
-  -o-transition-property:  opacity;
-  transition-property:  opacity;
-  -webkit-transition-duration: .5s;
-  -moz-transition-duration: .5s;
-  -o-transition-duration: .5s;
-  transition-duration: .5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.controlVisible {
-  opacity: 1 !important;
-}

@@ -1,25 +1,6 @@
 #closePhoto {
-  border: .1em solid white;
-  border-radius: .85em;
-  color: white;
-  font-size: 1.5em;
-  height: 1.5em;
-  left: 1em;
-  line-height: 1.5em;
-  position: fixed;
-  text-align: center;
   top: 1em;
-  width: 1.5em;
-  box-sizing: content-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
-#closePhoto:hover {
-  -webkit-box-shadow: 0 0 .5em yellow;
-  -moz-box-shadow:0 0 .5em yellow;
-  box-shadow:0 0 .5em yellow;
+  right: 1.25em;
 }
 
 #prevPhoto {
@@ -31,15 +12,35 @@
 }
 
 #prevPhoto, #nextPhoto {
-  color: white;
-  font-size: 1.5em;
   height: 1em;
-  line-height: 1em;
   margin-top: -.5em;
-  position: fixed;
   top: 50%;
 }
 
-#prevPhoto:hover, #nextPhoto:hover {
+.control:hover {
   text-shadow: yellow 0 0 .5em;
+}
+
+.control {
+  position: fixed;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition-property:  opacity;
+  -moz-transition-property:  opacity;
+  -o-transition-property:  opacity;
+  transition-property:  opacity;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.controlVisible {
+  opacity: 1 !important;
 }

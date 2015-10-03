@@ -1,24 +1,13 @@
 var fotorama;
 
 $(document).ready(function(){
+  // fotorama: it is recommended to start listening to the events before initialization
   $('#fotorama').on('fotorama:showend', function (e, fotorama, extra) {
     var newindex = fotorama.activeFrame.id;
     if (newindex != lastindex) {
-      history.pushState(null, null, '/photo/' + fotoramaIdToUrlId(newindex) + '/');
+      history.pushState(null, null, config['photoDir'] + fotoramaIdToUrlId(newindex) + '/');
       lastindex = newindex;
     }
-  });
-
-  $('#closePhoto').click(function() {
-    window.location.href = '/';
-  });
-
-  $('#prevPhoto').click(function() {
-    fotorama.show('<');
-  });
-
-  $('#nextPhoto').click(function() {
-    fotorama.show('>');
   });
 
   fotorama = $('#fotorama').fotorama({
@@ -29,6 +18,31 @@ $(document).ready(function(){
     arrows: false,
     startindex: startindex
   }).data('fotorama');
+
+  $('#closePhoto').click(function() {
+    window.location.href = '/';
+  });
+  $('#prevPhoto').click(function() {
+    fotorama.show('<');
+  });
+  $('#nextPhoto').click(function() {
+    fotorama.show('>');
+  });
+
+  var id = null;
+  $(document).mousemove(function() {
+    clearTimeout(id);
+    $('.control').addClass('controlVisible');
+    id = setTimeout('$(".control").removeClass("controlVisible");', 3000);
+  });
+
+  $(document).on('mouseenter', function () {
+    $('.control').toggleClass('controlVisible');
+  });
+  $(document).on('mouseleave', function () {
+    clearTimeout(id);
+    $('.control').toggleClass('controlVisible');
+  });
 });
 
 $(window).on("popstate", function(e) {
@@ -42,9 +56,9 @@ $(window).on("popstate", function(e) {
 });
 
 function fotoramaIdToUrlId(fotoramaId) {
-  return fotoramaId.substring(fotoramaIdPrefix.length);
+  return fotoramaId.substring(config['fotoramaIdPrefix'].length);
 }
 
 function urlIdToFotoramaId(urlId) {
-  return fotoramaIdPrefix + urlId;
+  return config['fotoramaIdPrefix'] + urlId;
 }

@@ -8,7 +8,7 @@ $(document).ready(function() {
   imageBehind = $('#imageBehind');
   coords = $('#coordContainer');
 
-  // restoring scrolling position after page loadss
+  // restoring scrolling position after page load
   var scrollPos = localStorage.getItem('scrollPos');
   if (scrollPos !== null) {
     $(window).scrollTop(scrollPos);
@@ -26,9 +26,9 @@ $(window).scroll(function() {
 });
 
 // blur and fade-out background
-var blurCoeff = 60;
-var maxBlur = 6;
-var minBrightness = 30;
+var blurCoeff = 60; // in px from top of the screen. the greater the value, the longer will be effect at scrolling
+var maxBlur = 6; // max blur coeff. no more blur at long scroll than this value
+var minBrightness = 30; // 0 - dark, 100 - bright
 function blurAndFadeOutBackground(scrollPos) {
   var brightness = 100 - ((100 - minBrightness) * scrollPos / imageBackground.height());
   var blur = scrollPos / blurCoeff;

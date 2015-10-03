@@ -18,7 +18,7 @@
   <div id="thumbContainer">
     <?php
       foreach ($thumbs as $t) {
-        ?><a href="/photo/<?php echo $t->id ?>/"><img class="thumb" src="<?php echo $t->thumb_path ?>"></a><?php
+        ?><a href="<?php echo $config["photoDir"] ?><?php echo $t->id ?>/"><img class="thumb" src="<?php echo $t->thumb_path ?>"></a><?php
       }
     ?>
   </div>
