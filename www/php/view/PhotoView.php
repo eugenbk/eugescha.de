@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/css/fotorama.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/photo.css">
+  <?php echo $metrikaCode ?>
   <script src="/js/jquery-2.1.4.min.js"></script>
   <script src="/js/fotorama.js"></script>
   <script src="/js/photo.js"></script>
