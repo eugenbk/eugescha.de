@@ -1,15 +1,15 @@
 USE eugescha_db;
 
-INSERT INTO T_Photo
-(thumb_path, photo_path, upload_date, photo_date)
-VALUES
-("1.jpg", "1.jpg", '2015-07-07', '2015-04-19'),
-("2.jpg", "2.jpg", '2015-07-06', '2015-04-25'),
-("3.jpg", "3.jpg", '2015-07-05', '2015-04-26'),
-("4.jpg", "4.jpg", '2015-07-04', '2015-06-13'),
-("5.jpg", "5.jpg", '2015-07-03', '2015-06-13'),
-("6.jpg", "6.jpg", '2015-07-02', '2014-05-24'),
-("7.jpg", "7.jpg", '2015-07-01', '2014-05-24'),
-("8.jpg", "8.jpg", '2015-06-30', '2014-05-24'),
-("9.jpg", "9.jpg", '2015-05-29', '2014-05-25'),
-("10.jpg", "10.jpg", '2015-05-29', '2014-06-01');
+INSERT INTO `T_Photo` SET
+`id` = 1,
+`thumb_path` = 'DSC_5075_thumb.jpg',
+`photo_path` = 'DSC_5075.jpg',
+`upload_date` = '2015-10-05',
+`photo_date` = '2015-09-23';
+
+INSERT INTO `T_Photo` SET
+`id` = 2,
+`thumb_path` = 'DSC_3830_thumb.jpg',
+`photo_path` = 'DSC_3830.jpg',
+`upload_date` = '2015-10-06',
+`photo_date` = '2015-07-18';
