@@ -50,9 +50,10 @@ function blurAndFadeOutBackgroundIe(scrollPos) {
   imageBehind.css('opacity', opacity);
   coords.css('opacity', brightness);
   if (scrollPos > 0) {
-    $('#coordContainer a').css({'color': 'transparent', 'border-bottom-color': 'transparent'});
-    $('#coordContainer a').css('text-shadow', '0 0 ' + blur + 'px white');
-    $('#coordContainer a').css('box-shadow', '0 4px ' + blur + 'px -2px white');
+    $('#coordContainer a').css('opacity', '.6');
+    $('#coordContainer a').css('border-bottom-color', 'transparent');
+    $('#coordContainer a').css('text-shadow', '0 0 ' + blur * 2 + 'px');
+    $('#coordContainer a').css('box-shadow', '0 4px ' + blur + 'px -3px');
   } else {
     $('#coordContainer a').removeAttr('style');
   }
