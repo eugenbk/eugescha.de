@@ -1,5 +1,15 @@
-#imageBehind , #imageBackground {
+.slide {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+#splashScreenContainer {
   position: fixed;
+}
+
+#imageBehind , #imageBackground {
+  position: absolute;
   width: 100%;
   height: 100%;
   -webkit-background-size: cover;
@@ -12,12 +22,12 @@
   background: black url(/img/background.jpg) no-repeat center fixed;
 }
 
-.imageBackground_blurred { /* ie only */
+.imageBackground_blurred {
   background: black url(/img/background_blurred.jpg) no-repeat center fixed;
 }
 
 #coordContainer {
-  position: fixed;
+  position: absolute;
   left: 55%;
   top: 60%;
   font-family: 'Aaargh';
@@ -40,10 +50,6 @@
 }
 
 #thumbContainer {
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  min-height: 100%;
   padding: 0 10%;
   display: flex;
   justify-content: space-between;
@@ -56,4 +62,14 @@
   width: 160px;
   height: 160px;
   margin: 16px;
+}
+
+#usContainer {
+  background-color: black;
+  display: flex;
+  align-items: flex-end;
+}
+
+#usImg {
+  width: 100%;
 }
