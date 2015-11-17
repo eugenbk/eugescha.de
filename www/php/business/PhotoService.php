@@ -26,10 +26,11 @@ function getPhotos() {
     $p->photo_path = $config["photoDir"] . $p->photo_path;
 
     $photos[] = array("id" => $config["fotoramaIdPrefix"] . $p->id,
-                      "img" => $p->photo_path);
+                      "img" => $p->photo_path,
+                      "caption" => $p->caption,
+                      "url" => $p->url);
   }
-
-  $json = stripslashes(json_encode($photos));
+  $json = json_encode($photos);
 
   return $json;
 }

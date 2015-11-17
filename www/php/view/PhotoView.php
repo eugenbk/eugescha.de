@@ -19,8 +19,9 @@
 </head>
 <body>
   <div id="fotorama" data-auto="false"></div>
-  <div id="closePhoto" class="control">&#10007;</div>
-  <div id="prevPhoto" class="control">&#9664;</div>
-  <div id="nextPhoto" class="control">&#9654;</div>
+  <div id="closePhoto" class="control disappearingElement">&#10007;</div>
+  <div id="prevPhoto" class="control disappearingElement">&#9664;</div>
+  <div id="nextPhoto" class="control disappearingElement">&#9654;</div>
+  <div id="caption" class="disappearingElement"></div>
 </body>
 </html>

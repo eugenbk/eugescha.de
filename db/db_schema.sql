@@ -9,6 +9,9 @@ CREATE TABLE IF NOT EXISTS T_Photo (
   thumb_path VARCHAR(255) NOT NULL,
   photo_path VARCHAR(255) NOT NULL,
   upload_date DATE NOT NULL,
-  photo_date DATE NOT NULL
+  photo_date DATE NOT NULL,
+  caption VARCHAR(255),
+  url VARCHAR(255)
 )
-ENGINE = InnoDB;
+ENGINE = InnoDB
+CHARACTER SET = utf8;

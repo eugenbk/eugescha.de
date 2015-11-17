@@ -7,6 +7,7 @@ function load($query) {
   global $config;
 
   mysql_connect($config["dbSrv"], $config["dbUsr"], $config["dbPwd"]) or die(mysql_error());
+  mysql_set_charset("utf8");
   mysql_select_db($config["dbName"]);
 
   $result = mysql_query($query);
