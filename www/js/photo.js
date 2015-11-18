@@ -1,6 +1,6 @@
-var fotorama;
-
 $(document).ready(function(){
+  var fotorama;
+
   var prevPhoto = $('#prevPhoto');
   var nextPhoto = $('#nextPhoto');
   var caption = $('#caption');
@@ -8,12 +8,14 @@ $(document).ready(function(){
   // fotorama: it is recommended to start listening to the events before initialization
   $('#fotorama').on('fotorama:show', function (e, fotorama) {
     // displaying caption
-    if (fotorama.activeFrame.caption) {
+    var captionText = fotorama.activeFrame.caption;
+    if (captionText) {
       caption.show();
+      var captionTextFormatted = '<span>' + captionText.substring(0, captionText.length - 1) + '</span>' + captionText.charAt(captionText.length - 1);
       if (fotorama.activeFrame.url) {
-        caption.html('<a href="' + fotorama.activeFrame.url + '">' + fotorama.activeFrame.caption + '</a>');
+        caption.html('<a href="' + fotorama.activeFrame.url + '">' + captionTextFormatted + '</a>');
       } else {
-        caption.text(fotorama.activeFrame.caption);
+        caption.html(captionTextFormatted);
       }
     } else {
       caption.hide();
@@ -61,15 +63,14 @@ $(document).ready(function(){
   });
 
   // hiding disappearing elements when no mouse moving
-  var timeout = 3000; // 3 sec
   var id = null;
   $(document).mousemove(function() {
     clearTimeout(id);
     $('.disappearingElement').addClass('disappearingElement_visible');
-    id = setTimeout('$(".disappearingElement").removeClass("disappearingElement_visible");', timeout);
+    id = setTimeout('$(".disappearingElement").removeClass("disappearingElement_visible");', config['disappearingElementHidingTimeout']);
   });
 
-  // displaying and hiding disappearings elements when entering and leaving browser window by the cursor
+  // displaying and hiding disappearing elements when entering and leaving browser window by the cursor
   $(document).on('mouseenter', function () {
     $('.disappearingElement').toggleClass('disappearingElement_visible');
   });

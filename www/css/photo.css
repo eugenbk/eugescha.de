@@ -53,10 +53,15 @@
   left: 50%;
   bottom: 1em;
   transform: translateX(-50%);
+  margin-right: -.1em;
   padding: .25em;
   background-color: rgba(0, 0, 0, 0.5);
   font-family: 'AC Line';
   color: white;
+}
+
+#caption span {
+  letter-spacing: .1em;
 }
 
 #caption a, #caption a:active, #caption a:hover, #caption a:visited {
