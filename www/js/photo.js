@@ -64,10 +64,11 @@ $(document).ready(function(){
 
   // hiding disappearing elements when no mouse moving
   var id = null;
+  var disappearingElementHidingTimeout = 3000; // 3 sec
   $(document).mousemove(function() {
     clearTimeout(id);
     $('.disappearingElement').addClass('disappearingElement_visible');
-    id = setTimeout('$(".disappearingElement").removeClass("disappearingElement_visible");', config['disappearingElementHidingTimeout']);
+    id = setTimeout('$(".disappearingElement").removeClass("disappearingElement_visible");', disappearingElementHidingTimeout);
   });
 
   // displaying and hiding disappearing elements when entering and leaving browser window by the cursor

@@ -54,7 +54,6 @@
   left: 50%;
   bottom: 1em;
   transform: translateX(-50%);
-  margin-right: -.1em;
   padding: .25em;
   background-color: rgba(0, 0, 0, 0.5);
   font-family: 'AC Line';

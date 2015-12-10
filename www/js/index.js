@@ -10,14 +10,26 @@ $(document).ready(function() {
 
   // restoring scrolling position after page load
   var scrollPos = localStorage.getItem('scrollPos');
-  if (scrollPos !== null) {
+  if (scrollPos != null) {
     $(window).scrollTop(scrollPos);
     localStorage.removeItem('scrollPos');
+  } else {
+    scrollPos = $(window).scrollTop();
   }
 
   // store scrolling position when clicking on a thumbnail
   $('#thumbContainer a').click(function() {
     localStorage.setItem('scrollPos', $(window).scrollTop());
+  });
+
+  // display coords with an effect as soon as background is loaded
+  var displayingCoordsEffectDuration = 500; // .5 sec
+  $('#splashScreenContainer').waitForImages(function() {
+    if ($(window).scrollTop()) {
+      coords.show();
+    } else {
+      coords.show('clip', null /* options */, displayingCoordsEffectDuration, null /* fallback function */);
+    }
   });
 });
 
