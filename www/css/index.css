@@ -1,7 +1,10 @@
-.slide {
+.slide, .slide100 {
+  position: relative;
+}
+
+.slide100 {
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 #splashScreenContainer {

@@ -12,7 +12,7 @@
   <script src="/js/index.js"></script>
 </head>
 <body>
-  <div id="splashScreenContainer" class="slide">
+  <div id="splashScreenContainer" class="slide100">
     <div id="imageBackground" class="imageBackground_blurred"></div>
     <div id="imageBehind" class="imageBackground"></div>
     <div id="coordContainer">
@@ -20,7 +20,7 @@
       <a href="https://www.here.com/?map=48.13373,11.59471,19&amp;x=ep">11°35'40.9"E</a>
     </div>
   </div>
-  <div class="slide"></div> <!-- place holder for splashScreenContainer (fake container) -->
+  <div class="slide100"></div> <!-- place holder for splashScreenContainer (fake container) -->
   <div id="thumbContainer" class="slide">
     <?php
       foreach ($thumbs as $t) {
@@ -28,7 +28,7 @@
       }
     ?>
   </div>
-  <div id="blackSpaceContainer" class="slide"></div>
+  <div id="blackSpaceContainer" class="slide100"></div>
   <div id="usContainer" class="slide">
     <img id="usImg" src="/img/us.jpg">
   </div>
